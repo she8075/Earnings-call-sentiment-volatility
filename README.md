@@ -84,7 +84,7 @@ Fetches current S&P 500 constituents from Wikipedia and writes `data/sp500_alias
 python scraper.py --start 01/01/2021 --end 12/31/2021 --by-month
 ```
 Outputs `data/raw/koyfin_transcripts_2021.jsonl`. Repeat for each year 2016–2024.  
-Raw data (~5GB total) is stored externally: [Google Drive](https://drive.google.com/drive/folders/1LLrWIe6YeXfYdSe5ictnh23otvaTBU_w?usp=drive_link).
+Raw transcripts (~5GB) were sourced via [Koyfin](https://www.koyfin.com) and cannot be redistributed. Please refer to Koyfin directly to access earnings call transcripts.
 
 ### 3. Preprocess
 ```bash
@@ -185,12 +185,11 @@ HC3-robust standard errors. Winsorization at 1st/99th percentile.
 
 ## External Data
 
-Raw transcripts (~5GB) and pre-built parquet files are stored on Google Drive due to size constraints:  
-📁 [Google Drive — project data](https://drive.google.com/drive/folders/1LLrWIe6YeXfYdSe5ictnh23otvaTBU_w?usp=drive_link).
+Raw transcripts (~5GB) were sourced via [Koyfin](https://www.koyfin.com) and cannot be redistributed. If you wish to reproduce this study, please refer to Koyfin directly to obtain earnings call transcripts.
 
 Files tracked in this repository:
 - `data/sp500_aliases.csv` — S&P 500 canonical alias table
-- `models/finbert_tone/` — fine-tuned model weights
+- `models/finbert_tone/` — fine-tuned model weights (438 MB, hosted on HuggingFace: [She8075/Model.safetensors](https://huggingface.co/She8075/Model.safetensors))
 - All intermediate `.parquet` files except raw transcripts and price cache
 
 ---
